@@ -6,6 +6,15 @@
 #include <sys/types.h>
 #include <sys/ioctl.h>
 
+void __clear__(void);
+char __get_input_realtime__(void);
+int __program_nano__(char* dir);
+
+int main(void){
+    __program_nano__("/");
+    return 0;
+}
+
 void __clear__(void){
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     #if defined(_WIN32) || defined(_WIN64)
@@ -430,3 +439,4 @@ int __program_nano__(char* dir){
     }
     return 0;
 }
+
